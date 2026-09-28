@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" width="760" height="270" role="img" aria-label="Research journey: hypoarena hypothesis discovery tournaments, then laborix autonomous experiment pipelines">
+  <style>
+    :root { color-scheme: light dark; }
+    .hd   { font: 600 15px ui-sans-serif, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #14302a; }
+    .lb   { font: 500 11px ui-sans-serif, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #55736b; }
+    .mono { font: 500 10px ui-monospace, monospace; fill: #55736b; }
+    .em   { stroke: #059669; } .ind { stroke: #4f46e5; }
+    .fem  { fill: #059669; } .find { fill: #4f46e5; }
+    .idea { animation: pop 3s ease-in-out infinite both; transform-box: fill-box; transform-origin: center; }
+    @keyframes pop { 0%,100% { transform: scale(.85); opacity: .55 } 50% { transform: scale(1.1); opacity: 1 } }
+    .i2 { animation-delay: .4s } .i3 { animation-delay: .8s } .i4 { animation-delay: 1.2s }
+    .debate { fill: none; stroke-width: 1.6; stroke-dasharray: 4 4; animation: flow 2s linear infinite both; }
+    @keyframes flow { to { stroke-dashoffset: -16 } }
+    .podium { animation: rise 3s ease-in-out infinite both; transform-box: fill-box; transform-origin: bottom; }
+    @keyframes rise { 0%,100% { transform: scaleY(.82) } 50% { transform: scaleY(1) } }
+    .dagn { animation: light 4.8s steps(1,end) infinite both; opacity: .22; }
+    @keyframes light { 6%,20% { opacity: 1 } }
+    .d2 { animation-delay: .6s } .d3 { animation-delay: 1.2s } .d4 { animation-delay: 1.8s } .d5 { animation-delay: 2.4s }
+    .chain { stroke-dasharray: 260; stroke-dashoffset: 260; animation: draw 4.8s ease-in-out infinite both; }
+    @keyframes draw { 30%,70% { stroke-dashoffset: 0 } 100% { stroke-dashoffset: 0 } }
+    .regret { fill: none; stroke-width: 2.2; stroke-dasharray: 200; stroke-dashoffset: 200; animation: draw 4.8s ease-in-out infinite both; }
+    .axis { stroke: #9db8ae; stroke-width: 1.5; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .hd { fill: #e6f5ef } .lb, .mono { fill: #9db8ae } .axis { stroke: #3f5a51 }
+    }
+  </style>
+
+  <!-- ═══ Act 1 · hypoarena ═══ -->
+  <text class="hd" x="30" y="30">① hypoarena · 假设发现竞技场</text>
+  <text class="mono" x="30" y="48">2025-01 → 2026-09 · 309 commits</text>
+  <!-- idea nodes → debate → podium -->
+  <g transform="translate(40,74)">
+    <circle class="idea fem" cx="8" cy="10" r="6"/>
+    <circle class="idea fem i2" cx="8" cy="34" r="6"/>
+    <circle class="idea find i3" cx="34" cy="22" r="6"/>
+    <path class="debate em" d="M14 12 Q 24 16 29 20"/>
+    <path class="debate ind" d="M14 32 Q 24 28 29 24"/>
+    <path class="debate em" d="M40 22 L 66 22"/>
+  </g>
+  <g transform="translate(116,70)">
+    <rect class="podium fem" x="0"  y="26" width="14" height="22" rx="2"/>
+    <rect class="podium find" x="18" y="14" width="14" height="34" rx="2" style="animation-delay:.5s"/>
+    <rect class="podium fem" x="36" y="32" width="14" height="16" rx="2" style="animation-delay:1s"/>
+    <text class="mono" x="20" y="10">Elo</text>
+  </g>
+  <!-- grounding + dedup marks -->
+  <g transform="translate(196,74)">
+    <rect x="0" y="0" width="84" height="44" rx="8" fill="none" stroke="#059669" stroke-width="1.4"/>
+    <path class="debate em" d="M10 14 H 74 M10 24 H 62 M10 34 H 70"/>
+    <circle class="idea find i2" cx="74" cy="34" r="4"/>
+  </g>
+  <text class="lb" x="36" y="146">grounding 校验 · 生成-辩论-进化 · Bradley-Terry/Elo 锦标赛 · MinHash 去重 · 贝叶斯证据累积</text>
+
+  <!-- ═══ Act 2 · laborix ═══ -->
+  <text class="hd" x="420" y="30">② laborix · 自主实验流水线</text>
+  <text class="mono" x="420" y="48">2025-02 → 2026-09 · 349 commits</text>
+  <!-- DAG executing in topological order -->
+  <g transform="translate(430,72)">
+    <circle class="dagn fem" cx="6" cy="22" r="6"/>
+    <circle class="dagn find d2" cx="40" cy="8" r="6"/>
+    <circle class="dagn fem d3" cx="40" cy="36" r="6"/>
+    <circle class="dagn find d4" cx="74" cy="22" r="6"/>
+    <path class="debate em" d="M12 19 L 34 11 M12 25 L 34 33 M46 11 L 68 19 M46 33 L 68 25"/>
+  </g>
+  <!-- ledger chain -->
+  <g transform="translate(530,76)">
+    <rect class="dagn fem" x="0" y="0" width="16" height="12" rx="2"/>
+    <rect class="dagn fem d2" x="22" y="0" width="16" height="12" rx="2"/>
+    <rect class="dagn fem d3" x="44" y="0" width="16" height="12" rx="2"/>
+    <path class="chain ind" d="M16 6 H 22 M38 6 H 44" stroke="#4f46e5" stroke-width="2"/>
+    <text class="mono" x="0" y="30">ledger 🔗</text>
+  </g>
+  <!-- regret curve -->
+  <g transform="translate(618,66)">
+    <path class="axis" d="M0 52 H 100 M0 52 V 4"/>
+    <path class="regret em" d="M2 50 C 30 30, 55 18, 98 10"/>
+    <path class="regret find" d="M2 50 C 40 44, 70 40, 98 36" style="animation-delay:.4s"/>
+    <text class="mono" x="52" y="64">regret↓</text>
+  </g>
+  <text class="lb" x="424" y="146">计划 DSL+DAG · 确定性执行器 · 防篡改溯源账本 · UCB1/Thompson 调度 · 消融矩阵</text>
+
+  <!-- ═══ timeline axis ═══ -->
+  <g transform="translate(30,196)">
+    <path class="axis" d="M0 20 L 700 20"/>
+    <path class="axis" d="M694 15 L 700 20 L 694 25"/>
+    <rect x="0"  y="14" width="468" height="12" rx="6" fill="#059669" opacity=".25"/>
+    <rect x="26" y="14" width="468" height="12" rx="6" fill="#4f46e5" opacity=".2"/>
+    <text class="mono" x="0"   y="44">2025-01</text>
+    <text class="mono" x="216" y="44">2025-10</text>
+    <text class="mono" x="430" y="44">2026-03</text>
+    <text class="mono" x="640" y="44">2026-09</text>
+    <text class="lb" x="238" y="-2">658 次提交 · 每一次都带构建/测试/格式检查回执 · 合成基准 · 无预训练权重</text>
+  </g>
+</svg>
