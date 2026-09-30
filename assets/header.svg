@@ -39,7 +39,7 @@
   <text class="ttl" x="106" y="46" clip-path="url(#tw)">渴望已久 · AI for Science × 探索与发现</text>
   <g class="caretmove"><rect class="blink" x="106" y="24" width="3" height="28" rx="1" fill="#059669"/></g>
 
-  <text class="sub" x="106" y="78">USTC · hypothesis-discovery agents · autonomous experiment pipelines · offline-first &amp; reproducible</text>
+  <text class="sub" x="106" y="78">Matter · hypothesis-discovery agents · autonomous experiment pipelines · offline-first &amp; reproducible</text>
   <g transform="translate(106,92)">
     <rect width="86" height="4" rx="2" fill="#059669" opacity=".85"/>
     <rect x="92" width="52" height="4" rx="2" fill="#4f46e5" opacity=".85"/>
